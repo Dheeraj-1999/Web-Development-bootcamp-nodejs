@@ -1,0 +1,18 @@
+h4 {
+    color:red;
+    border: 4px powderblue solid;
+    
+}
+
+li{
+    color: saddlebrown;
+}
+
+p {
+    background-color:tomato;
+}
+
+body {
+    background: url(https://images.unsplash.com/photo-1512078083908-46520ff2a87d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80);
+    background-size: cover;
+}
