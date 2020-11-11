@@ -1,0 +1,15 @@
+li {
+    /* background: rgb(194, 164, 194); */
+    border: purple 2px solid;
+}
+#notDone {
+    background: purple;
+} 
+
+.Done {
+    text-decoration: line-through;
+}
+body {
+    background: url(https://images.unsplash.com/photo-1512078083908-46520ff2a87d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80);
+    background-size: cover;
+}
