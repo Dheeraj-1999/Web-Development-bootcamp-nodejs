@@ -1,0 +1,22 @@
+
+h4 + ul {
+    border: 4px solid rebeccapurple ;
+    background: peachpuff;
+    
+}
+
+ul #carrotVegetables{
+    
+    color: powderblue;
+    background: rgb(243, 118, 118);
+}
+
+ul #reddishVegetables {
+    /* color: powderblue; */
+    background: rgb(236, 217, 236);
+}
+
+ul #matarVegetables {
+    color: powderblue;
+    background: rgb(4, 190, 66);
+}
