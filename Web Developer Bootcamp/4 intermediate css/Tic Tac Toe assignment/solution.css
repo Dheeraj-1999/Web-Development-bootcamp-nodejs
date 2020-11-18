@@ -1,0 +1,30 @@
+body {
+    background:black;
+}
+
+h1 {
+    color: chartreuse;
+    text-align: center;
+}
+td {
+    width: 100px;
+    height: 100px;
+    /* background: white; */
+    /*  */
+}
+.vertical {
+    border-left: yellow 2px solid;
+    border-right: yellow 2px solid;
+    /* border-left: yellow 2px solid; */
+}
+.center {
+    border-top: yellow 2px solid;
+    border-bottom: yellow 2px solid;
+}
+table {
+    margin: 10px auto ;
+    /* background: gray; */
+}
+td:hover {
+    border: gainsboro 2px solid;
+}
