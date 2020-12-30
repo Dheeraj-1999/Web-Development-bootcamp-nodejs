@@ -4,3 +4,10 @@ for( var i=0; i<lis.length; i++) {
       this.style.color = "pink";
     });
   }
+
+
+var button = document.querySelector("button");
+var bd = document.querySelector("body");
+button.addEventListener("click", function() {
+    bd.classList.toggle("tg");
+});
