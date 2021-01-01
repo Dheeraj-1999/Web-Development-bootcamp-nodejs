@@ -1,0 +1,33 @@
+body {
+    background: #232323;
+}
+
+.square {
+    width: 30%;
+    background: purple;
+    padding-bottom: 30%;
+    margin: 1.66%;
+    float: left;
+}
+
+#container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    background: rgb(61, 17, 61);
+    color: white;
+
+}
+
+#stripe {
+    /* color: white; */
+    background: white;
+    height: 50px;
+    text-align: center;
+}
+
+.wrongSelected {
+    background: gray;
+}
