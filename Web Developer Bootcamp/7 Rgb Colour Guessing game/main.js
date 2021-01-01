@@ -1,19 +1,17 @@
 // **********************************************************************************************
 // giving Colors to squares
-var colors = giveColorRandom(6);
-console.log(colors);
+var colors;
 var squares = document.querySelectorAll(".square");
-
-// *********************************************************************************    
-// message to be printed
 var messageDisp = document.querySelector("#message");
+var h1 = document.querySelector("h1");
+var pickedColor;
+var nSquares = 6;
+var pickedColorDisp = document.getElementById("pickedColor");
+var newColors = document.querySelector("#reset");
+var easyBtn = document.querySelector("#easyBtn");
+var hardBtn = document.querySelector("#hardBtn");
 
-for(var i=0; i<squares.length; i++) {
-    squares[i].style.backgroundColor = colors[i];
-
-
-    // ******************************************************************************
-    // hit event on clicking the square..;./.....;...........................
+function hitSquare() {
     squares[i].addEventListener("click", function() {
         if(this.style.backgroundColor !== pickedColor) {
             this.style.backgroundColor = "black";
@@ -28,7 +26,7 @@ for(var i=0; i<squares.length; i++) {
         }
     });
 }
-var h1 = document.querySelector("h1");
+
 function giveHColor() {
     
     h1.style.background = pickedColor;
@@ -40,23 +38,8 @@ function changeColors() {
     }
 }
 
-// ******************************************************************************
-// logic behind picked color
-var pickedColor = pickColorRandom(6);
-var pickedColorDisp = document.getElementById("pickedColor");
-pickedColorDisp.textContent = pickedColor;
-
-
-
-// **********************************************************************************
-// Button New Colors!
-var newColors = document.querySelector("#reset");
-newColors.addEventListener("click", function() {
-    reset();
-});
-
-function reset() {
-        var nSquares = 6;
+    function reset() {
+        nSquares = 6;
         if(easyBtn.classList.length > 0) {
             nSquares = 3;
         }
@@ -70,10 +53,6 @@ function reset() {
         messageDisp.textContent = "";
         newColors.textContent = "New Colors";
 }
-
-
-
-
 
 function pickColorRandom(number) {
     var random = Math.floor(Math.random()*number);
@@ -96,8 +75,35 @@ function giveColorRandom(numbers) {
 }
 
 
-var easyBtn = document.querySelector("#easyBtn");
-var hardBtn = document.querySelector("#hardBtn");
+// -********************************* ###### *** ####### *** #####    *** ####### ***************************************************************************************
+// ********************************** ##     *** ##   ## *** ##   ##  *** ##      ****************************************************************************
+// ********************************** ##     *** ##   ## *** ##    ## *** ####### *********************************************************************************
+// *********************************  ##     *** ##   ## *** ##    ## *** ##      *********************************************************************************
+// ********************************** ###### *** ####### *** ######   *** ####### **************************************************
+
+
+colors = giveColorRandom(nSquares);
+console.log(colors);
+for(var i=0; i<squares.length; i++) {
+    squares[i].style.backgroundColor = colors[i];
+
+    // ******************************************************************************
+    // hit event on clicking the square..;./.....;...........................
+    hitSquare();
+}
+
+// ******************************************************************************
+// logic behind picked color
+
+pickedColor = pickColorRandom(nSquares);
+pickedColorDisp.textContent = pickedColor;
+
+// **********************************************************************************
+// Button New Colors!
+
+newColors.addEventListener("click", function() {
+    reset();
+});
 
 
 easyBtn.addEventListener("click", function() {
