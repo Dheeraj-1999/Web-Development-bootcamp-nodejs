@@ -84,6 +84,8 @@ function giveColorRandom(numbers) {
 }
 
 
+
+
 // -********************************* ###### *** ####### *** #####    *** ####### ***************************************************************************************
 // ********************************** ##     *** ##   ## *** ##   ##  *** ##      ****************************************************************************
 // ********************************** ##     *** ##   ## *** ##    ## *** ####### *********************************************************************************
@@ -91,21 +93,22 @@ function giveColorRandom(numbers) {
 // ********************************** ###### *** ####### *** ######   *** ####### **************************************************
 
 
-colors = giveColorRandom(nSquares);
-console.log(colors);
-for(var i=0; i<squares.length; i++) {
-    squares[i].style.backgroundColor = colors[i];
+// colors = giveColorRandom(nSquares);  **********can use reset instead of below lines
+    
+// ******************************************************************************
+// logic behind picked color   
+// pickedColor = pickColorRandom(nSquares);
+// pickedColorDisp.textContent = pickedColor;
 
-    // ******************************************************************************
-    // hit event on clicking the square..;./.....;...........................
-    hitSquare();
-}
+reset(nSquares);
+console.log(colors);
 
 // ******************************************************************************
-// logic behind picked color
-
-pickedColor = pickColorRandom(nSquares);
-pickedColorDisp.textContent = pickedColor;
+// hit event on clicking the square..;./.....;...........................
+for(var i=0; i<squares.length; i++) {
+    // squares[i].style.backgroundColor = colors[i];
+    hitSquare();
+}
 
 // **********************************************************************************
 // Button New Colors!
@@ -113,7 +116,6 @@ pickedColorDisp.textContent = pickedColor;
 newColors.addEventListener("click", function() {
     reset(nSquares);
 });
-
 
 
 for(var i=0; i<modes.length; i++) {
@@ -147,6 +149,9 @@ for(var i=0; i<modes.length; i++) {
     });
 
 }
+
+
+
 // ******************************************************************************************
 // ************************************* Hard Code of easy button and Hard button *********************
 
