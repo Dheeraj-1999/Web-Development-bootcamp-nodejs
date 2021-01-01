@@ -67,6 +67,8 @@ function reset() {
             squares[i].style.backgroundColor = colors[i];
         }
         h1.style.background = "rgb(61, 17, 61)";
+        messageDisp.textContent = "";
+        newColors.textContent = "New Colors";
 }
 
 
