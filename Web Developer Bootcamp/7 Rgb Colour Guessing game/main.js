@@ -58,8 +58,7 @@ newColors.addEventListener("click", function() {
     for(var i=0; i<squares.length; i++) {
         squares[i].style.backgroundColor = colors[i];
     }
-    h1.style.background = "#232323";
-
+    h1.style.background = "rgb(61, 17, 61)";
 });
 
 
@@ -83,3 +82,18 @@ function giveColorRandom(numbers) {
     }
     return(colors);
 }
+
+
+var easyBtn = document.querySelector("#easyBtn");
+var hardBtn = document.querySelector("#hardBtn");
+
+
+easyBtn.addEventListener("click", function() {
+    this.classList.add("selected");
+    hardBtn.classList.remove("selected");
+});
+
+hardBtn.addEventListener("click", function() {
+    this.classList.add("selected");
+    easyBtn.classList.remove("selected");
+});

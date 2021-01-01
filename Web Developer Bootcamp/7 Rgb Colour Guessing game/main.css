@@ -31,3 +31,7 @@ h1 {
 .wrongSelected {
     background: gray;
 }
+
+.selected {
+    background:  rgb(61, 17, 61);
+}
