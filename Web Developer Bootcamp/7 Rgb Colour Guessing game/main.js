@@ -42,7 +42,7 @@ function changeColors() {
 
 // ******************************************************************************
 // logic behind picked color
-var pickedColor = pickColorRandom();
+var pickedColor = pickColorRandom(6);
 var pickedColorDisp = document.getElementById("pickedColor");
 pickedColorDisp.textContent = pickedColor;
 
@@ -52,19 +52,29 @@ pickedColorDisp.textContent = pickedColor;
 // Button New Colors!
 var newColors = document.querySelector("#reset");
 newColors.addEventListener("click", function() {
-    colors = giveColorRandom(6);
-    pickedColor = pickColorRandom();
-    pickedColorDisp.textContent = pickedColor;
-    for(var i=0; i<squares.length; i++) {
-        squares[i].style.backgroundColor = colors[i];
-    }
-    h1.style.background = "rgb(61, 17, 61)";
+    reset();
 });
 
+function reset() {
+        var nSquares = 6;
+        if(easyBtn.classList.length > 0) {
+            nSquares = 3;
+        }
+        colors = giveColorRandom(nSquares);
+        pickedColor = pickColorRandom(nSquares);
+        pickedColorDisp.textContent = pickedColor;
+        for(var i=0; i<nSquares; i++) {
+            squares[i].style.backgroundColor = colors[i];
+        }
+        h1.style.background = "rgb(61, 17, 61)";
+}
 
 
-function pickColorRandom() {
-    var random = Math.floor(Math.random()*squares.length);
+
+
+
+function pickColorRandom(number) {
+    var random = Math.floor(Math.random()*number);
     console.log(random);
     return  colors[random];
 }
@@ -91,9 +101,21 @@ var hardBtn = document.querySelector("#hardBtn");
 easyBtn.addEventListener("click", function() {
     this.classList.add("selected");
     hardBtn.classList.remove("selected");
+
+    colors = giveColorRandom(3);
+    pickedColor = pickColorRandom(3);
+    pickedColorDisp.textContent = pickedColor;
+    reset();
+    for(var i=3; i<squares.length; i++){
+        squares[i].style.display = "none";
+    }
 });
 
 hardBtn.addEventListener("click", function() {
     this.classList.add("selected");
     easyBtn.classList.remove("selected");
+    reset();
+    for(var i=3; i<squares.length; i++){
+        squares[i].style.display = "block";
+    }
 });
