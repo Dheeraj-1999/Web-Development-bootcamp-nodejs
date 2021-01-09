@@ -1,6 +1,14 @@
 body {
-    background-color: wheat;
+    /* background-color: wheat; */
     font-family: Roboto;
+
+    /* adding gradient background */
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,33,9,1) 15%, rgba(0,212,255,1) 100%); 
+}
+
+.fa-plus {
+    float: right;
 }
 
 h1 {
@@ -37,6 +45,7 @@ input {
     padding: 13px 13px 13px 20px;
     box-sizing: border-box;
     color:rgb(218, 136, 106);
+    border: 2px solid rgb(0, 0, 0, 0);
     /* height: 20px;
     margin: 0; */
 }
@@ -57,4 +66,20 @@ input:focus {
 .clickedli {
     text-decoration: line-through;
     color:gray;
+}
+
+span {
+    background-color: #e74c3c;
+    width: 0px;
+    height: 40px;
+    margin-right: 20px;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    transition: 0.2s linear;
+    opacity: 0;
+}
+li:hover span{
+    width: 40px;
+    opacity: 1.0;
 }
