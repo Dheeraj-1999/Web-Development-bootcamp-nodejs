@@ -7,3 +7,8 @@ body {
     width: 30%;
     margin: 10% auto;
 }
+
+.clickedli {
+    text-decoration: line-through;
+    color:gray;
+}
