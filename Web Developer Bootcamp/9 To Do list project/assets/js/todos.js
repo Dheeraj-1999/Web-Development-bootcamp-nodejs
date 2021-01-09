@@ -28,7 +28,11 @@ $("input[type='text']").on("keypress", function(event) {
         // on enetring input must go away;
         $(this).val("");
         // appendind the li html code!
-        var liText = "<li><span class='clicked'>X</span> " + todoText + "</li>"
+        var liText = "<li><span class='clicked'><i class='fa fa-trash'></i></span> " + todoText + "</li>"
         $("ul").append(liText);
     }
+});
+
+$(".fa-plus").on("click", function() {
+    $("input[type='text']").fadeToggle();
 });
