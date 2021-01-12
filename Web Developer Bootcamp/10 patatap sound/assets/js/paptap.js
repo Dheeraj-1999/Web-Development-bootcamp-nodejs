@@ -227,7 +227,6 @@ function onFrame(event) {
             // console.log(circles, "removed");
         }
     }
-    
 }
 
 var sound = new Howl({
